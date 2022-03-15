@@ -22,8 +22,22 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Dillon Waugh")
 
+@app.route('/properties/create')
+def addProperty():
+    """For displaying the form to add a new property."""
+    return render_template('newProperty.html')
+
+@app.route('/properties/')
+def allProperties():
+    """For displaying a list of all properties in the database."""
+    return render_template('allProperties.html')
+
+@app.route('/property/<propertyid>')
+def singleProperty(propertyid):
+    """For viewing an individual property by the specific property id."""
+    return render_template('singleProperty.html')
 
 ###
 # The functions below should be applicable to all Flask apps.
