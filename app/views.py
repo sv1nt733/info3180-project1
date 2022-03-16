@@ -7,6 +7,8 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for
+from app.forms import createPropertyForm
+from app.models import Properties
 
 
 ###
