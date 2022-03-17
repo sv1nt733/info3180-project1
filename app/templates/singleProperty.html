@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div>
+    <div class="propDetail">
+        <img class="singleImg" src="{{url_for('fetchImage',filename=singleProp.photo)}}">
+        <h5 class="card-title">{{singleProp.title}}</h5>
+        <div id="propertyDetails-upper">
+            <div class="price">{{singleProp.price}}</div>
+            <div class="propertyType">{{singleProp.propertyType}}</div>
+        </div>
+        <div class="description">{{singleProp.description}}</div>
+        <div class="bedrooms">{{singleProp.bedrooms}} Bedrooms</div>
+        <div class="bathrooms">{{singleProp.bathrooms}} Bathrooms</div>
+        <div class="location">{{singleProp.location}}</div>
+        <button class="btn btn-success">Email Realtor</button>
+                   
+    </div>
+</div>
+
+{% endblock %}
